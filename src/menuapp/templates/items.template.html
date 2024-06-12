@@ -1,4 +1,4 @@
-<ol class="breadcrumb">
+<!-- <ol class="breadcrumb">
   <li class="breadcrumb-item"><a ui-sref="home">Home</a></li>
   <li class="breadcrumb-item"><a ui-sref="category">Category</a></li>
   <li class="breadcrumb-item">Items</li>
@@ -6,3 +6,20 @@
 
 <h4>{{cat.items.name}}</h4>
 <items-data items="cat.items"></items-data>
+ -->
+
+ <div class="container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a ui-sref="home">Home</a></li>
+    <li class="breadcrumb-item"><a ui-sref="category">Category</a></li>
+    <li class="breadcrumb-item">Items</li>
+  </ol>
+
+  <h4>{{cat.items.name}}</h4>
+  <div class="items">
+    <div class="item" ng-repeat="item in cat.items">
+      <h5>{{item.name}} : {{item.price_large}}$</h5>
+      <p>{{item.description}}</p>
+    </div>
+  </div>
+</div>
