@@ -41,10 +41,7 @@ function MenuDataService($http, $q) {
     //the https returned
     $http({
       method: 'GET',
-      url: 'https://coursera-jhu-default-rtdb.firebaseio.com/menu_items.json',
-      params: {
-        category: categoryShortName
-      }
+      url: 'https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/{categoryShortName}.json',
     })
     .then( function (result) {
       deferred.resolve(result.data.menu_items);
